@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%} {%endblock%}
+{%block titleh1%} {%endblock%}
+{%block content%}
+<table class="table table-striped table-responsive table-bordered">
+    <thead class="thead-default">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Console</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for gamepy in gameshtml%}
+            <tr>
+                <td>{{gamepy.name}}</td>
+                <td>{{gamepy.category}}</td>
+                <td>{{gamepy.console}}</td>
+            </tr>
+        {%endfor%}
+    </tbody>
+</table>
+{%endblock%}
