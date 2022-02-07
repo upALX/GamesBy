@@ -33,3 +33,5 @@ export FLASK=ENV=development
 and
 flask run app.py 
 ```
+
+*Developed with :purple_heart: by Alexandre*
