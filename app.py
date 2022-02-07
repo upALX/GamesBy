@@ -1,5 +1,5 @@
 from turtle import title
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -30,7 +30,6 @@ def newgame():
 
 @app.route('/create-game', methods=['POST',])
 def createGame():
-    titlePage = 'Create game | GamesBy' 
     name = request.form['name_name']
     category = request.form['category_name']
     console = request.form['console_name']
@@ -39,4 +38,4 @@ def createGame():
 
     listGames.append(game)
 
-    return render_template('index.html', title=titlePage, games=listGames)
+    return redirect('/')
