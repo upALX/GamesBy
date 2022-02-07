@@ -11,11 +11,11 @@
         </tr>
     </thead>
     <tbody>
-        {%for gamepy in gameshtml%}
+        {%for game in games%}
             <tr>
-                <td>{{gamepy.name}}</td>
-                <td>{{gamepy.category}}</td>
-                <td>{{gamepy.console}}</td>
+                <td>{{game.name}}</td>
+                <td>{{game.category}}</td>
+                <td>{{game.console}}</td>
             </tr>
         {%endfor%}
     </tbody>
